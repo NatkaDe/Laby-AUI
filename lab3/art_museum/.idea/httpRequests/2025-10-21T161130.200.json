@@ -1,0 +1,26 @@
+[
+  {
+    "uuid": "8065d0fb-005d-4d85-9fbe-ec6e4566c476",
+    "name": "Katsushika Hokusai",
+    "year_of_birth": 1760,
+    "year_of_death": 1849
+  },
+  {
+    "uuid": "ed817e4b-b82e-48b3-bab2-5dd8c7db2b0f",
+    "name": "Utagawa Hiroshige",
+    "year_of_birth": 1797,
+    "year_of_death": 1858
+  },
+  {
+    "uuid": "b328a066-634f-4fb5-8f7a-67440969da6a",
+    "name": "Tawaraya Sōtatsu",
+    "year_of_birth": 1570,
+    "year_of_death": 1640
+  },
+  {
+    "uuid": "66d9796e-3e59-4fc4-8153-b899fde54fed",
+    "name": "Vincent van Gogh",
+    "year_of_birth": 1853,
+    "year_of_death": 1890
+  }
+]

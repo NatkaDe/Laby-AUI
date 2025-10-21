@@ -1,0 +1,6 @@
+{
+  "timestamp": "2025-10-21T14:23:50.616+00:00",
+  "status": 500,
+  "error": "Internal Server Error",
+  "path": "/authors/32f640e9-87b5-4424-85d7-a30c617ca8a3/paintings"
+}

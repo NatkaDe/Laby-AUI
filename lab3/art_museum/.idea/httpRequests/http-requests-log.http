@@ -1,0 +1,522 @@
+GET http://localhost:8080/authors
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T164246.200.json
+
+###
+
+GET http://localhost:8080/authors/ce6f349a-8ed8-437b-be58-a6c7074247f0/paintings
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T164141.200.json
+
+###
+
+POST http://localhost:8080/authors/ce6f349a-8ed8-437b-be58-a6c7074247f0/paintings
+Content-Type: application/json
+Content-Length: 46
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "Irises screen",
+  "year": 1703
+}
+
+<> 2025-10-21T164132.201.json
+
+###
+
+GET http://localhost:8080/authors/ce6f349a-8ed8-437b-be58-a6c7074247f0/paintings
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T163901.200.json
+
+###
+
+POST http://localhost:8080/authors
+Content-Type: application/json
+Content-Length: 83
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+ {
+   "name": "Ogata Kōrin",
+   "year_of_birth": 1658,
+   "year_of_death": 1716
+ }
+
+<> 2025-10-21T163849.201.json
+
+###
+
+GET http://localhost:8080/authors
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T163843.200.json
+
+###
+
+GET http://localhost:8080/authors/73415dec-e52e-4ebb-92a1-8398c277f0da/paintings
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T163314.200.json
+
+###
+
+GET http://localhost:8080/authors
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T163308.200.json
+
+###
+
+DELETE http://localhost:8080/authors/73415dec-e52e-4ebb-92a1-8398c277f0da/paintings/30448362-984e-419d-ae9c-6480f2a02ceb
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+PUT http://localhost:8080/authors/73415dec-e52e-4ebb-92a1-8398c277f0da/paintings/30448362-984e-419d-ae9c-6480f2a02ceb
+Content-Type: application/json
+Content-Length: 60
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "Starry Night Over the Rhone",
+  "year": 1888
+}
+
+<> 2025-10-21T163244.200.json
+
+###
+
+POST http://localhost:8080/authors/73415dec-e52e-4ebb-92a1-8398c277f0da/paintings
+Content-Type: application/json
+Content-Length: 45
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "Starry Night",
+  "year": 1889
+}
+
+<> 2025-10-21T163218.201.json
+
+###
+
+GET http://localhost:8080/authors/73415dec-e52e-4ebb-92a1-8398c277f0da/paintings/6d1cdc58-f29a-4755-80de-b5021a6eb27b
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T163202.200.json
+
+###
+
+GET http://localhost:8080/authors/73415dec-e52e-4ebb-92a1-8398c277f0da/paintings
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T163140.200.json
+
+###
+
+GET http://localhost:8080/authors
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T163121.200.json
+
+###
+
+GET http://localhost:8080/authors/32f640e9-87b5-4424-85d7-a30c617ca8a3/paintings
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+###
+
+GET http://localhost:8080/authors
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T162824.200.json
+
+###
+
+DELETE http://localhost:8080/authors/32f640e9-87b5-4424-85d7-a30c617ca8a3
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+GET http://localhost:8080/authors/32f640e9-87b5-4424-85d7-a30c617ca8a3/paintings
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T162806.200.json
+
+###
+
+GET http://localhost:8080/authors
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T162758.200.json
+
+###
+
+GET http://localhost:8080/authors/32f640e9-87b5-4424-85d7-a30c617ca8a3/paintings
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T162725.200.json
+
+###
+
+DELETE http://localhost:8080/authors/32f640e9-87b5-4424-85d7-a30c617ca8a3/paintings/1e67bc1a-cf00-46f5-b5c7-27638e6ecf03
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+PUT http://localhost:8080/authors/32f640e9-87b5-4424-85d7-a30c617ca8a3/paintings/1e67bc1a-cf00-46f5-b5c7-27638e6ecf03Content-Type:%20application/json
+Content-Length: 60
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "Starry Night Over the Rhone",
+  "year": 1888
+}
+
+<> 2025-10-21T162647.404.json
+
+###
+
+GET http://localhost:8080/authors/32f640e9-87b5-4424-85d7-a30c617ca8a3/paintings/1e67bc1a-cf00-46f5-b5c7-27638e6ecf03
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T162640.200.json
+
+###
+
+PUT http://localhost:8080/authors/32f640e9-87b5-4424-85d7-a30c617ca8a3/paintings/1e67bc1a-cf00-46f5-b5c7-27638e6ecf03Content-Type:%20application/json
+Content-Length: 60
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "Starry Night Over the Rhone",
+  "year": 1888
+}
+
+<> 2025-10-21T162631.404.json
+
+###
+
+GET http://localhost:8080/authors/32f640e9-87b5-4424-85d7-a30c617ca8a3/paintings/1e67bc1a-cf00-46f5-b5c7-27638e6ecf03
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T162541.200.json
+
+###
+
+GET http://localhost:8080/authors/32f640e9-87b5-4424-85d7-a30c617ca8a3/paintings
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T162522.200.json
+
+###
+
+POST http://localhost:8080/authors/32f640e9-87b5-4424-85d7-a30c617ca8a3/paintings
+Content-Type: application/json
+Content-Length: 45
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "Starry Night",
+  "year": 1889
+}
+
+<> 2025-10-21T162350.500.json
+
+###
+
+GET http://localhost:8080/authors/32f640e9-87b5-4424-85d7-a30c617ca8a3/paintings
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T161922.200.json
+
+###
+
+POST http://localhost:8080/authors/32f640e9-87b5-4424-85d7-a30c617ca8a3/paintings
+Content-Type: application/json
+Content-Length: 45
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "Starry Night",
+  "year": 1889
+}
+
+<> 2025-10-21T161911.500.json
+
+###
+
+GET http://localhost:8080/authors/32f640e9-87b5-4424-85d7-a30c617ca8a3/paintings
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T161847.200.json
+
+###
+
+POST http://localhost:8080/authors/32f640e9-87b5-4424-85d7-a30c617ca8a3/paintings
+Content-Type: application/json
+Content-Length: 49
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+ {
+   "title": "Starry Night",
+   "year": 1889
+ }
+
+<> 2025-10-21T161822.500.json
+
+###
+
+GET http://localhost:8080/authors/32f640e9-87b5-4424-85d7-a30c617ca8a3/paintings/1e67bc1a-cf00-46f5-b5c7-27638e6ecf03
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T161801.200.json
+
+###
+
+GET http://localhost:8080/authors/32f640e9-87b5-4424-85d7-a30c617ca8a3/paintings
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T161758.200.json
+
+###
+
+GET http://localhost:8080/authors/32f640e9-87b5-4424-85d7-a30c617ca8a3/paintings/1e67bc1a-cf00-46f5-b5c7-27638e6ecf03
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T161753.200.json
+
+###
+
+GET http://localhost:8080/authors/32f640e9-87b5-4424-85d7-a30c617ca8a3/paintings
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T161728.200.json
+
+###
+
+GET http://localhost:8080/authors
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T161710.200.json
+
+###
+
+GET http://localhost:8080/authors/b328a066-634f-4fb5-8f7a-67440969da6a/paintings
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T161233.200.json
+
+###
+
+GET http://localhost:8080/authors
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T161206.200.json
+
+###
+
+DELETE http://localhost:8080/authors/66d9796e-3e59-4fc4-8153-b899fde54fed
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+GET http://localhost:8080/authors
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T161150.200.json
+
+###
+
+PUT http://localhost:8080/authors/66d9796e-3e59-4fc4-8153-b899fde54fed
+Content-Type: application/json
+Content-Length: 97
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+ {
+   "name": "Vincent van Gogh - my love",
+   "year_of_birth": 1853,
+   "year_of_death": 1890
+ }
+
+<> 2025-10-21T161145.200.json
+
+###
+
+GET http://localhost:8080/authors
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T161130.200.json
+
+###
+
+POST http://localhost:8080/authors
+Content-Type: application/json
+Content-Length: 87
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+ {
+   "name": "Vincent van Gogh",
+   "year_of_birth": 1853,
+   "year_of_death": 1890
+ }
+
+<> 2025-10-21T161124.201.json
+
+###
+
+GET http://localhost:8080/authors/b328a066-634f-4fb5-8f7a-67440969da6a
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T161119.200.json
+
+###
+
+GET http://localhost:8080/authors
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T161103.200.json
+
+###
+
+GET http://localhost:8080/authors/4283e0f4-93fb-4dfd-b3b3-082f3c3f7975/paintings
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T160508.404.json
+
+###
+
+GET http://localhost:8080/authors/4283e0f4-93fb-4dfd-b3b3-082f3c3f7975/paintings
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T155831.404.json
+
+###
+
+GET http://localhost:8080/authors/4283e0f4-93fb-4dfd-b3b3-082f3c3f7975
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T155815.200.json
+
+###
+
+GET http://localhost:8080/authors/4283e0f4-93fb-4dfd-b3b3-082f3c3f7975/paintings
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T155744.404.json
+
+###
+
+GET http://localhost:8080/authors/4283e0f4-93fb-4dfd-b3b3-082f3c3f7975/paintings
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2025-10-21T155709.404.json
+
+###
+
