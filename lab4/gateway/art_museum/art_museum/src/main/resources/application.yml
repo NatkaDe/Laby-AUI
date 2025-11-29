@@ -1,0 +1,18 @@
+server:
+  port: 8091
+
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      routes:
+        - id: author-service
+          uri: http://localhost:8081
+          predicates:
+            - Path=/authors/**
+
+        - id: painting-service
+          uri: http://localhost:8082
+          predicates:
+            - Path=/authors/*/paintings/**

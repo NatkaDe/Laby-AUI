@@ -1,0 +1,26 @@
+[
+  {
+    "uuid": "4158077e-2626-4b3c-b8c0-bc916d77bf22",
+    "name": "Katsushika Hokusai",
+    "year_of_birth": 1760,
+    "year_of_death": 1849
+  },
+  {
+    "uuid": "db857a9d-b031-4dec-9819-e5a0f405d58b",
+    "name": "Utagawa Hiroshige",
+    "year_of_birth": 1797,
+    "year_of_death": 1858
+  },
+  {
+    "uuid": "86e5c348-32fb-4160-8f42-65aa582003e7",
+    "name": "Tawaraya Sōtatsu",
+    "year_of_birth": 1570,
+    "year_of_death": 1640
+  },
+  {
+    "uuid": "927ce9db-e6e2-4873-b5fa-a551281a25e9",
+    "name": "Ogata Kōrin from Kyoto",
+    "year_of_birth": 1658,
+    "year_of_death": 1716
+  }
+]

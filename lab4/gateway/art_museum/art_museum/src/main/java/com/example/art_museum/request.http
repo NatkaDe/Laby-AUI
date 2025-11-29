@@ -1,0 +1,85 @@
+###
+
+# authors fetching (all)
+GET http://localhost:8091/authors
+Accept: application/json
+
+###
+
+ # author fetching
+GET http://localhost:8091/authors/123
+Accept: application/json
+
+###
+
+ # author adding
+POST http://localhost:8091/authors
+Content-Type: application/json
+
+ {
+   "id": 666,
+   "name": "Ogata Kōrin",
+   "year_of_birth": 1658,
+   "year_of_death": 1716
+ }
+
+###
+
+ # author updating
+PUT http://localhost:8091/authors/666
+Content-Type: application/json
+
+ {
+   "name": "Ogata Kōrin from Kyoto",
+   "year_of_birth": 1658,
+   "year_of_death": 1716
+ }
+
+###
+
+ # author deleting
+DELETE http://localhost:8091/authors/666
+
+###
+
+ # paintings fetching (by author)
+GET http://localhost:8082/authors/123/paintings
+Accept: application/json
+
+###
+
+ # painting fetching
+GET http://localhost:8082/authors/123/paintings/742f1b04-9c6f-494e-a425-1556f89c38e8
+Accept: application/json
+
+###
+
+ # painting adding
+POST http://localhost:8082/authors/123/paintings
+Content-Type: application/json
+
+{
+  "title": "Irises screen",
+  "year": 1703
+}
+
+###
+
+ # painting updating
+PUT http://localhost:8082/authors/123/paintings/0d2ddf26-7a3d-4e32-a5b0-6607bc0ff057
+Content-Type: application/json
+
+{
+  "title": "Starry Night Over the Rhone",
+  "year": 1888
+}
+
+###
+
+ # painting deleting
+DELETE http://localhost:8082/authors/123/paintings/0d2ddf26-7a3d-4e32-a5b0-6607bc0ff057
+
+###
+
+
+
