@@ -15,7 +15,7 @@ public class AuthorService {
     private final AuthorRepository authorRepository;
     private final RestTemplate restTemplate;
 
-    private final String PAINTING_SERVICE_URL = "http://localhost:8082/internal/authors/";
+    private final String PAINTING_SERVICE_URL = "http://localhost:8082/authors/";
 
     public AuthorService(AuthorRepository authorRepository, RestTemplate restTemplate) {
         this.authorRepository = authorRepository;

@@ -17,7 +17,7 @@ public class ArtMuseumApplication {
 	@Qualifier("authors")
 	public RestTemplate restTemplate(RestTemplateBuilder builder) {
 		return builder
-				.rootUri("http://localhost:8082/authors")
+				.rootUri("http://localhost:8082")
 				.build();
 	}
 

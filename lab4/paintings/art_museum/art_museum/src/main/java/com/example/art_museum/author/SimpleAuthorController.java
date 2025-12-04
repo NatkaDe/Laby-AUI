@@ -3,7 +3,11 @@ package com.example.art_museum.author;
 import com.example.art_museum.painting.PaintingService;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+@RequestMapping("/authors")
+@RestController
 public class SimpleAuthorController {
 
     private final PaintingService paintingService;

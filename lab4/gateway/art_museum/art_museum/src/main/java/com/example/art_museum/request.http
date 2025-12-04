@@ -38,7 +38,7 @@ Content-Type: application/json
 ###
 
  # author deleting
-DELETE http://localhost:8091/authors/666
+DELETE http://localhost:8091/authors/123
 
 ###
 
