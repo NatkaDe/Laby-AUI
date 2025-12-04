@@ -7,7 +7,7 @@ Accept: application/json
 ###
 
  # author fetching
-GET http://localhost:8091/authors/123
+GET http://localhost:8091/authors/456
 Accept: application/json
 
 ###
@@ -38,24 +38,24 @@ Content-Type: application/json
 ###
 
  # author deleting
-DELETE http://localhost:8091/authors/123
+DELETE http://localhost:8091/authors/456
 
 ###
 
  # paintings fetching (by author)
-GET http://localhost:8082/authors/123/paintings
+GET http://localhost:8091/authors/123/paintings
 Accept: application/json
 
 ###
 
  # painting fetching
-GET http://localhost:8082/authors/123/paintings/742f1b04-9c6f-494e-a425-1556f89c38e8
+GET http://localhost:8091/authors/123/paintings/3330a647-e50a-4adb-b3c8-3a6ca9e97477
 Accept: application/json
 
 ###
 
  # painting adding
-POST http://localhost:8082/authors/123/paintings
+POST http://localhost:8091/authors/123/paintings
 Content-Type: application/json
 
 {
@@ -66,7 +66,7 @@ Content-Type: application/json
 ###
 
  # painting updating
-PUT http://localhost:8082/authors/123/paintings/0d2ddf26-7a3d-4e32-a5b0-6607bc0ff057
+PUT http://localhost:8091/authors/123/paintings/a6632681-4ecd-4804-9faa-0b42e9fff23f
 Content-Type: application/json
 
 {
@@ -77,7 +77,7 @@ Content-Type: application/json
 ###
 
  # painting deleting
-DELETE http://localhost:8082/authors/123/paintings/0d2ddf26-7a3d-4e32-a5b0-6607bc0ff057
+DELETE http://localhost:8091/authors/123/paintings/a6632681-4ecd-4804-9faa-0b42e9fff23f
 
 ###
 

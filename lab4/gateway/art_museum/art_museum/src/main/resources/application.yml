@@ -7,12 +7,12 @@ spring:
   cloud:
     gateway:
       routes:
+        - id: painting-service
+          uri: http://localhost:8082
+          predicates:
+            - Path=/authors/*/paintings/**
         - id: author-service
           uri: http://localhost:8081
           predicates:
             - Path=/authors/**
 
-        - id: painting-service
-          uri: http://localhost:8082
-          predicates:
-            - Path=/authors/*/paintings/**
