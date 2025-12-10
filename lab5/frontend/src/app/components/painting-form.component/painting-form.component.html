@@ -1,0 +1,40 @@
+<div style="padding: 20px; max-width: 500px; margin: 0 auto; background: #f9f9f9; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+
+  <h2 style="text-align: center; color: #980d43;">
+    {{ isEditMode ? 'Edytuj Obraz' : 'Dodaj Nowy Obraz' }}
+  </h2>
+
+  <form (ngSubmit)="onSubmit()">
+
+    <div style="margin-bottom: 15px;">
+      <label style="font-weight: bold; display: block; margin-bottom: 5px;">Tytuł dzieła:</label>
+      <input type="text"
+             [(ngModel)]="painting.title"
+             name="title"
+             required
+             style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <label style="font-weight: bold; display: block; margin-bottom: 5px;">Rok powstania:</label>
+      <input type="number"
+             [(ngModel)]="painting.year"
+             name="year"
+             required
+             style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+    </div>
+
+    <div style="display: flex; justify-content: space-between;">
+      <button type="button" (click)="goBack()"
+              style="background: #ff8bb3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+        Anuluj
+      </button>
+
+      <button type="submit"
+              style="background: #d66395; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">
+        {{ isEditMode ? 'Zapisz zmiany' : 'Dodaj obraz' }}
+      </button>
+    </div>
+
+  </form>
+</div>

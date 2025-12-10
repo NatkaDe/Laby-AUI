@@ -1,0 +1,20 @@
+[
+  {
+    "uuid": "7eb141ba-383c-4598-a0d2-261ea011a6a0",
+    "name": "Katsushika Hokusai",
+    "year_of_birth": 1760,
+    "year_of_death": 1849
+  },
+  {
+    "uuid": "810ededd-2527-4a8f-8b90-99031795bc6d",
+    "name": "Utagawa Hiroshige",
+    "year_of_birth": 1797,
+    "year_of_death": 1858
+  },
+  {
+    "uuid": "10fea6ff-e332-41c5-a0a9-564a942f7262",
+    "name": "Tawaraya Sōtatsu",
+    "year_of_birth": 1570,
+    "year_of_death": 1640
+  }
+]
