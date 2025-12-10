@@ -14,7 +14,6 @@ import { Author } from '../../models/author';
 })
 export class AuthorFormComponent implements OnInit {
 
-  // Pusty obiekt na start
   author: Author = {
     id: 0,
     name: '',
@@ -22,24 +21,21 @@ export class AuthorFormComponent implements OnInit {
     year_of_death: 0
   };
 
-  isEditMode: boolean = false; // Czy edytujemy, czy dodajemy?
+  isEditMode: boolean = false;
 
   constructor(
     private authorService: AuthorService,
-    public router: Router, // Do przekierowania po zapisie
-    private route: ActivatedRoute // Do odczytania ID z paska adresu
+    public router: Router,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
-    // Sprawdzamy, czy w adresie jest ID (np. /authors/edit/5)
     const id = this.route.snapshot.paramMap.get('id');
 
     if (id) {
-      // MAMY ID -> TRYB EDYCJI
       this.isEditMode = true;
       this.loadAuthor(Number(id));
     } else {
-      // BRAK ID -> TRYB DODAWANIA
       this.isEditMode = false;
     }
   }
@@ -55,15 +51,13 @@ export class AuthorFormComponent implements OnInit {
     console.log('Zapisuję:', this.author);
 
     if (this.isEditMode) {
-      // AKTUALIZACJA (PUT)
       this.authorService.updateAuthor(this.author.id, this.author).subscribe({
-        next: () => this.router.navigate(['/authors']), // Wróć do listy
+        next: () => this.router.navigate(['/authors']),
         error: (err) => alert('Błąd edycji!')
       });
     } else {
-      // TWORZENIE (POST)
       this.authorService.createAuthor(this.author).subscribe({
-        next: () => this.router.navigate(['/authors']), // Wróć do listy
+        next: () => this.router.navigate(['/authors']),
         error: (err) => alert('Błąd dodawania!')
       });
     }

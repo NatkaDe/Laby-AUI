@@ -19,22 +19,20 @@ export class PaintingDetailsComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private paintingService: PaintingService,
-    private cdr: ChangeDetectorRef // <--- 2. WSTRZYKNIĘCIE
+    private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {
-    // 1. Pobieramy ID autora (Liczba)
     const authorIdParam = this.route.snapshot.paramMap.get('authorId');
     this.authorId = Number(authorIdParam);
 
-    // 2. Pobieramy ID obrazu (STRING - UUID)
     const paintingId = this.route.snapshot.paramMap.get('paintingId');
 
     if (paintingId) {
       this.paintingService.getPainting(this.authorId, paintingId).subscribe({
         next: (data) => {
           this.painting = data;
-          this.cdr.detectChanges(); // <--- 3. POBUDKA DLA ANGULARA!
+          this.cdr.detectChanges();
         },
         error: (err) => {
           console.error('Błąd pobierania:', err);
