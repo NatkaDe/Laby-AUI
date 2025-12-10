@@ -53,18 +53,16 @@ public class PaintingController {
         return ResponseEntity.ok(paintingMapper.toReadDTO(paintingOpt.get()));
     }
 
-    @PostMapping
-    public ResponseEntity<PaintingReadDTO> addPainting(@PathVariable Integer authorId,
-                                                       @RequestBody PaintingCreateUpdateDTO dto) {
-        Optional<SimpleAuthor> authorOpt = authorService.findById(authorId);
-        if (authorOpt.isEmpty()) return ResponseEntity.notFound().build();
-
-        Painting painting = paintingMapper.toEntity(dto);
-        painting.setAuthorID(authorOpt.get().getId());
-        Painting saved = paintingService.save(painting);
-
-        return new ResponseEntity<>(paintingMapper.toReadDTO(saved), HttpStatus.CREATED);
-    }
+//    @PostMapping
+//    public ResponseEntity<PaintingReadDTO> addPainting(@PathVariable Integer authorId,
+//                                                       @RequestBody PaintingCreateUpdateDTO dto) {
+//
+//        Painting painting = paintingMapper.toEntity(dto);
+//        painting.setAuthorID(authorId);
+//        Painting saved = paintingService.save(painting);
+//
+//        return new ResponseEntity<>(paintingMapper.toReadDTO(saved), HttpStatus.CREATED);
+//    }
 
     @PutMapping("/{id}")
     public ResponseEntity<PaintingReadDTO> updatePainting(@PathVariable Integer authorId,
@@ -92,6 +90,35 @@ public class PaintingController {
 
         paintingService.deleteById(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @PostMapping("/authors")
+    public void createSimpleAuthor(@RequestBody Integer authorId) {
+        if (authorService.findById(authorId).isEmpty()) {
+            SimpleAuthor newSimpleAuthor = new SimpleAuthor();
+            newSimpleAuthor.setId(authorId);
+            authorService.save(newSimpleAuthor);
+        }
+    }
+
+    @PostMapping
+    public ResponseEntity<PaintingReadDTO> addPainting(@PathVariable Integer authorId,
+                                                       @RequestBody PaintingCreateUpdateDTO dto) {
+
+        Optional<SimpleAuthor> authorOpt = authorService.findById(authorId);
+
+        if (authorOpt.isEmpty()) {
+            SimpleAuthor missingAuthor = new SimpleAuthor();
+            missingAuthor.setId(authorId);
+            authorService.save(missingAuthor);
+            System.out.println("Naprawiono brakującego autora w bazie obrazów: ID " + authorId);
+        }
+
+        Painting painting = paintingMapper.toEntity(dto);
+        painting.setAuthorID(authorId);
+        Painting saved = paintingService.save(painting);
+
+        return new ResponseEntity<>(paintingMapper.toReadDTO(saved), HttpStatus.CREATED);
     }
 }
 

@@ -23,9 +23,9 @@ public class AuthorService {
     }
 
 
-    public Author save(Author author) {
-        return authorRepository.save(author);
-    }
+    //public Author save(Author author) {
+        //return authorRepository.save(author);
+    //}
 
     public List<Author> findAll() { return authorRepository.findAll();}
 
@@ -43,5 +43,15 @@ public class AuthorService {
         }
     }
 
+    public Author save(Author author) {
+        Author savedAuthor = authorRepository.save(author);
+        try {
+            restTemplate.postForLocation("http://localhost:8091/paintings/authors", savedAuthor.getId());
+        } catch (Exception e) {
+            System.err.println("Nie udało się powiadomić serwisu Painting: " + e.getMessage());
+        }
+
+        return savedAuthor;
+    }
 
 }

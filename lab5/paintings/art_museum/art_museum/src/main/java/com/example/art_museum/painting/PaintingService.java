@@ -40,6 +40,7 @@ public class PaintingService {
     public void deleteById(UUID id) { paintingRepository.deleteById(id);}
 
 
+
     @Transactional
     public void deletePaintingsByAuthorId(Integer id) {
         paintingRepository.deleteAllByAuthorID(id);
