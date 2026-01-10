@@ -1,0 +1,74 @@
+
+<div class="container" style="padding: 20px;">
+
+  <div *ngIf="author">
+
+    <div class="header">
+      <h2>{{ author.name }}</h2>
+      <a routerLink="/authors"
+         style="color: #98126d; text-decoration: none; font-weight: bold; font-size: 14px;">
+        &larr; Wróć do listy
+      </a>
+    </div>
+
+    <div style="padding: 15px; background: #ffeef6; margin-bottom: 20px; border-radius: 4px;">
+      <p style="margin: 0;"><strong>Lata życia:</strong> {{ author.year_of_birth }} - {{ author.year_of_death }}</p>
+    </div>
+
+    <hr style="margin: 20px 0; border: 0; border-top: 1px solid #ddd;">
+
+    <div class="header" style="margin-bottom: 15px;">
+      <h3>Lista Obrazów</h3>
+
+      <a [routerLink]="['/authors', author.id, 'paintings', 'add']"
+         style="background-color: #c51257; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; cursor: pointer; font-size: 14px;">
+        + Dodaj Obraz
+      </a>
+    </div>
+
+    <div style="padding: 10px; background: #de81a9; margin-bottom: 10px; border-radius: 4px; color: #ffffff;">
+      Liczba dzieł w kolekcji: <strong>{{ paintings.length }}</strong>
+    </div>
+
+    <table *ngIf="paintings.length > 0" class="styled-table">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Tytuł Dzieła</th>
+        <th>Rok</th>
+        <th>Akcje</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let p of paintings">
+        <td>{{ p.uuid }}</td>
+
+        <td style="font-weight: bold;">
+          <a [routerLink]="['/authors', author.id, 'paintings', p.uuid]"
+             style="color: #98126d; text-decoration: underline; cursor: pointer;">
+            {{ p.title }}
+          </a>
+        </td>
+
+        <td>{{ p.year }}</td>
+
+        <td>
+          <a [routerLink]="['/authors', author.id, 'paintings', p.uuid, 'edit']"
+             style="background: #ea54a3; color: white; padding: 6px 12px; margin-right: 8px; text-decoration: none; border-radius: 4px; cursor: pointer; font-size: 14px;">
+            Edytuj
+          </a>
+
+          <button (click)="deletePainting(p.uuid)" class="btn-delete">
+            Usuń
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+    <div *ngIf="paintings.length === 0" style="padding: 20px; text-align: center; color: gray; border: 1px dashed #ccc; margin-top: 20px;">
+      Ten autor nie ma jeszcze przypisanych obrazów. Kliknij "Dodaj Obraz", aby to zmienić.
+    </div>
+
+  </div>
+</div>

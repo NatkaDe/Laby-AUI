@@ -1,0 +1,80 @@
+version: "3.8"
+
+services:
+  authors:
+    build: ./authors/art_museum/art_museum
+    container_name: authors
+    ports:
+      - "8081:8081"
+    networks:
+      - micro-net
+    environment:
+      SERVER_PORT: 8081
+
+  paintings:
+    build: ./paintings/art_museum/art_museum
+    container_name: paintings
+    ports:
+      - "8082:8082"
+    networks:
+      - micro-net
+    environment:
+      SERVER_PORT: 8082
+
+  gateway:
+    build: ./gateway/art_museum/art_museum
+    container_name: gateway
+    ports:
+      - "8091:8091"
+    depends_on:
+      - authors
+      - paintings
+    networks:
+      - micro-net
+    environment:
+      SERVER_PORT: 8091
+      AUTHORS_HOST: authors
+      AUTHORS_PORT: 8081
+      PAINTINGS_HOST: paintings
+      PAINTINGS_PORT: 8082
+
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    ports:
+      - "4200:80"
+    depends_on:
+      - gateway
+    networks:
+      - micro-net
+    environment:
+      GATEWAY_HOST: gateway
+      GATEWAY_PORT: 8091
+
+  categories-db:
+    image: postgres:15
+    container_name: categories-db
+    networks:
+      - micro-net
+    environment:
+      POSTGRES_DB: categoriesdb
+      POSTGRES_USER: categoriesuser
+      POSTGRES_PASSWORD: categoriespass
+    ports:
+      - "5432:5432"
+
+  elements-db:
+    image: postgres:15
+    container_name: elements-db
+    networks:
+      - micro-net
+    environment:
+      POSTGRES_DB: elementsdb
+      POSTGRES_USER: elementsuser
+      POSTGRES_PASSWORD: elementspass
+    ports:
+      - "5433:5432"
+
+networks:
+  micro-net:
+    driver: bridge

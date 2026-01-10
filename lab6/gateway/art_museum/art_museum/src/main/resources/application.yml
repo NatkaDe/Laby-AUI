@@ -1,0 +1,17 @@
+server:
+  port: 8091
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: paintings
+          uri: http://${PAINTINGS_HOST}:${PAINTINGS_PORT}
+          predicates:
+            - Path=/authors/*/paintings/**
+        - id: authors
+          uri: http://${AUTHORS_HOST}:${AUTHORS_PORT}
+          predicates:
+            - Path=/authors/**
+
+

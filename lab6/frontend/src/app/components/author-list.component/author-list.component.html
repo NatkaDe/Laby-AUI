@@ -1,0 +1,56 @@
+<div class="container">
+
+  <div class="header">
+    <h2>Lista Autorów</h2>
+
+    <a routerLink="/authors/add"
+       style="background-color: #c51257; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; cursor: pointer; font-size: 14px;">
+      + Dodaj Autora
+    </a>
+  </div>
+
+  <div style="padding: 10px; background: #de81a9; margin-bottom: 10px; border-radius: 4px; color: white;">
+    Liczba autorów w pamięci: <strong>{{ authors.length }}</strong>
+  </div>
+
+  <table *ngIf="authors.length > 0" class="styled-table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Autor (Kliknij po szczegóły!)</th>
+      <th>Lata Życia</th>
+      <th>Akcje</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let author of authors">
+      <td>{{ author.id }}</td>
+
+      <td style="font-weight: bold;">
+        <a [routerLink]="['/authors', author.id]"
+           style="color: #98126d; text-decoration: underline; cursor: pointer;">
+          {{ author.name }}
+        </a>
+      </td>
+
+      <td>{{ author.year_of_birth }} - {{ author.year_of_death }}</td>
+      <td>
+
+        <a [routerLink]="['/authors/edit', author.id]"
+           style="background: #ea54a3; color: white; padding: 6px 12px; margin-right: 8px; text-decoration: none; border-radius: 4px; cursor: pointer; font-size: 14px;">
+          Edytuj
+        </a>
+
+        <button (click)="deleteAuthor(author.id)" class="btn-delete">
+          Usuń
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="authors.length === 0" style="padding: 20px; text-align: center; color: gray;">
+    ⚠️ LISTA JEST PUSTA.
+  </div>
+
+</div>

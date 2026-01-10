@@ -1,0 +1,36 @@
+<div style="padding: 20px; max-width: 500px; margin: 0 auto;">
+
+  <h2>{{ isEditMode ? 'Edytuj Autora' : 'Dodaj Nowego Autora' }}</h2>
+
+  <form (ngSubmit)="onSubmit()">
+
+    <div style="margin-bottom: 15px;">
+      <label>Imię i Nazwisko:</label><br>
+      <input type="text" [(ngModel)]="author.name" name="name" required
+             style="width: 100%; padding: 8px;">
+    </div>
+
+    <div style="margin-bottom: 15px;">
+      <label>Rok urodzenia:</label><br>
+      <input type="number" [(ngModel)]="author.year_of_birth" name="year_of_birth" required
+             style="width: 100%; padding: 8px;">
+    </div>
+
+    <div style="margin-bottom: 15px;">
+      <label>Rok śmierci:</label><br>
+      <input type="number" [(ngModel)]="author.year_of_death" name="year_of_death" required
+             style="width: 100%; padding: 8px;">
+    </div>
+
+    <hr>
+
+    <button type="submit" style="background: #980d43; color: white; padding: 10px 20px; border: none; cursor: pointer; margin-right: 10px;">
+      {{ isEditMode ? 'Zapisz zmiany' : 'Dodaj autora' }}
+    </button>
+
+    <button type="button" (click)="router.navigate(['/authors'])" style="background: #ff8bb3; color: white; padding: 10px 20px; border: none; cursor: pointer;">
+      Anuluj
+    </button>
+
+  </form>
+</div>
